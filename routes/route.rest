@@ -1,0 +1,30 @@
+GET http://localhost:3000/recruiters
+
+###
+
+GET http://localhost:3000/recruiters/63eeb728e77b2953688a4b99
+
+###
+
+POST http://localhost:3000/recruiters
+Content-Type: application/json
+
+{
+    "name": "Genesis Guerra",
+    "email": "guerratavarezg@gmail.com",
+    "number": "9784296264",
+    "employer": "LPS"
+}
+
+###
+
+DELETE http://localhost:3000/recruiters/63eeb728e77b2953688a4b99
+
+###
+
+PATCH http://localhost:3000/recruiters/63eec442143cbd86c804eb9f
+Content-Type: application/json
+
+{
+    "name": "Genesis Y Guerra"
+}

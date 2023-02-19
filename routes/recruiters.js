@@ -26,7 +26,7 @@ router.post('/', async (req, res) => {
         employer: req.body.employer
     })
     try {
-        const newRecruiter = await recruiter.save()
+        const newRecruiter = await recruiter.save() 
         res.status(201).json(newRecruiter)
     } catch(err) {
         res.status(400).json({message: err.message})

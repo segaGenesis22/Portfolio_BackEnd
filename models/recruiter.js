@@ -3,19 +3,19 @@ const mongoose = require('mongoose')
 const recruitersSchema = new mongoose.Schema({
     name: {
         type: String,
-        default: 'Genesis'
+        require: true
     },
     email: {
         type: String,
-        default: 'guerra@gmail.com'
+        require: true
     },
     number: {
         type: String,
-        default: '9784296264'
+        require: true
     },
     employer: {
         type: String,
-        default: 'LPS'
+        require: true
     }
 })
 

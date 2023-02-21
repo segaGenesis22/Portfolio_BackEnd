@@ -2,7 +2,7 @@ GET http://localhost:3000/recruiters
 
 ###
 
-GET http://localhost:3000/recruiters/63eeb728e77b2953688a4b99
+GET http://localhost:3000/recruiters/63f53595a3017103427665a4
 
 ###
 

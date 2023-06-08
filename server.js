@@ -1,4 +1,4 @@
-const dotenv = require("dotenv").config({path: '/config.env'});
+import { config } from 'dotenv'
 
 const express = require('express')
 const app = express()

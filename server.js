@@ -10,6 +10,7 @@ const bodyParser = require('body-parser')
 const recruitersRouter = require('./routes/recruiters')
 
 mongoose.connect(process.env.DATABASE_URL, {useNewUrlParser: true})
+mongoose.set('strictQuery', false)
 
 const db = mongoose.connection
 db.on('error', (error) => console.error(error))

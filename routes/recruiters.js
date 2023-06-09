@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
         const recruiters = await Recruiter.find()
         res.json(recruiters)
     } catch (err){
-        console.log("trying to access something nnot handled yet.")
+        console.log("trying to access something not handled yet.")
         res.status(500).json({message: err.message})
     } 
 })

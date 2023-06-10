@@ -10,7 +10,7 @@ const bodyParser = require('body-parser')
 const recruitersRouter = require('./routes/recruiters')
 
 mongoose.connect(process.env.DATABASE_URL, {useNewUrlParser: true})
-mongoose.set('strictQuery', false)
+mongoose.set('strictQuery', true)
 
 const db = mongoose.connection
 db.on('error', (error) => console.error(error))
@@ -21,4 +21,4 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(express.json())
 app.use('/recruiters', recruitersRouter)
-app.listen(process.env.PORT || 5000, () => console.log('Server Started')) 
+app.listen(process.env.PORT || 3000, () => console.log('Server Started')) 

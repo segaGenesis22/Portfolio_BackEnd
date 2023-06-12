@@ -1,4 +1,3 @@
-//if (process.env.NODE_ENV !== "production") {}
 require("dotenv").config();
 
 const express = require('express')
@@ -8,7 +7,7 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 const recruitersRouter = require('./routes/recruiters')
 
-mongoose.connect(process.env.DATABASE_URL, {useNewUrlParser: true})
+mongoose.connect(process.env.HEROKU_POSTGRESQL_RED_URL, {useNewUrlParser: true})
 mongoose.set('strictQuery', true)
 
 const db = mongoose.connection

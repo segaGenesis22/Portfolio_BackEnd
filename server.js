@@ -2,11 +2,12 @@ require("dotenv").config();
 
 const express = require('express')
 const app = express()
-const mongoose = require('mongoose')
+
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const recruitersRouter = require('./routes/recruiters')
 
+const mongoose = require('mongoose')
 mongoose.connect(process.env.HEROKU_POSTGRESQL_RED_URL, {useNewUrlParser: true})
 mongoose.set('strictQuery', true)
 

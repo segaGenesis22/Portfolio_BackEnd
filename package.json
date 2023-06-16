@@ -19,7 +19,8 @@
     "heroku": "^7.69.1",
     "make-runnable": "^1.4.1",
     "mongoose": "^6.9.2",
-    "pg": "^8.11.0"
+    "pg": "^8.11.0",
+    "waterline-postgresql": "^0.50.0"
   },
   "devDependencies": {
     "@types/node": "^20.2.5",

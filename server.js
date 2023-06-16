@@ -8,7 +8,7 @@ const bodyParser = require('body-parser')
 const recruitersRouter = require('./routes/recruiters')
 
 const mongoose = require('mongoose')
-mongoose.connect(process.env.HEROKU_POSTGRESQL_RED_URL, {useNewUrlParser: true})
+mongoose.connect(process.env.DATABASE_URL, {useNewUrlParser: true})
 mongoose.set('strictQuery', true)
 
 const db = mongoose.connection

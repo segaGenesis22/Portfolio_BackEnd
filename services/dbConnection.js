@@ -35,7 +35,7 @@ pool.on("remove", () => {
     process.exit(0);
 });
 
-const client = new Client({
+const client = new pg({
     connectionString: process.env.HEROKU_POSTGRESQL_RED_URL,
     ssl: {
       rejectUnauthorized: false

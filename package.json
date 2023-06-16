@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "create": "node ./services/dbConnection.js createTables"
+    "create": "node ./service/dbConnection.js createTables"
   },
   "author": "Genesis Guerra",
   "license": "ISC",

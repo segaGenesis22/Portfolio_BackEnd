@@ -32,7 +32,7 @@ client.on("remove", () => {
 
 module.exports = {
     createTables,
-    pool,
+    client,
 };
 
 require("make-runnable");

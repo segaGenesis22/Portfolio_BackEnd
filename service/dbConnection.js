@@ -7,6 +7,8 @@ const client = new Client({
     }
   });
 
+client.connect();
+
 client.on("connect", () => {
     console.log("Connected to Postgres database.")
 });

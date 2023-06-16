@@ -35,6 +35,13 @@ pool.on("remove", () => {
     process.exit(0);
 });
 
+const client = new Client({
+    connectionString: process.env.HEROKU_POSTGRESQL_RED_URL,
+    ssl: {
+      rejectUnauthorized: false
+    }
+  });
+
 module.exports = {
     createTables,
     pool,

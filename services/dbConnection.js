@@ -1,6 +1,6 @@
-const { pg } = require("pg");
+const { Client } = require("pg");
 
-const client = new pg({
+const client = new Client({
     connectionString: process.env.HEROKU_POSTGRESQL_RED_URL,
     ssl: {
       rejectUnauthorized: false

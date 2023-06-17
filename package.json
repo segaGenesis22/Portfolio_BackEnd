@@ -22,6 +22,8 @@
     "make-runnable": "^1.4.1",
     "mongoose": "^6.9.2",
     "pg": "^8.11.0",
+    "sails-mysql": "^3.0.1",
+    "sails-postgresql": "^5.0.1",
     "waterline-postgresql": "^0.50.0"
   },
   "devDependencies": {

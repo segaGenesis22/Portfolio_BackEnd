@@ -1,4 +1,4 @@
-GET http://localhost:3000/recruiters
+GET http://localhost:3001/recruiters
 
 ###
 
@@ -6,7 +6,7 @@ GET http://localhost:3000/recruiters/63f53595a3017103427665a4
 
 ###
 
-POST http://localhost:3000/recruiters
+POST http://localhost:3001/recruiters
 Content-Type: application/json
 
 {

@@ -1,7 +1,6 @@
 const express = require('express')
 const router = express.Router()
 const Recruiter = require('../models/recruiter')
-const psqlDB = require('../service/dbConnection.js');
 
 //Getting all 
 router.get('/', async (req, res) => {

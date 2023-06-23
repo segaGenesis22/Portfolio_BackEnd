@@ -1,6 +1,10 @@
 const Client = require("pg");
 require('dotenv').config();
 
+const isProduction = process.env.NODE_ENV === 'production';
+
+const connectionString = `postgresql://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_DATABASE}`;
+
 const config = {
     adapter: "sails-postgresql",
     host: "ec2-18-211-172-50.compute-1.amazonaws.com",
@@ -13,7 +17,10 @@ const config = {
     idleTimeoutMillis: 30000,
 }; 
 
-const client = new Client.Pool(config);
+const client = new Client.Pool({
+    connectionString: isProduction ? process.env.HEROKU_POSTGRESQL_RED_URL : connectionString, 
+    ssl: isProduction,
+});
 
 client.on("connect", () => {
     console.log("Connected to Postgres database.")

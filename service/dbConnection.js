@@ -19,7 +19,7 @@ client.on("connect", () => {
 });
 
 const createTables = () => {
-    const personTable = 'CREATE TABLE IF NOT EXISTS person(id INT auto_increment PRIMARY KEY, name VARCHAR(50) NOT NULL, email VARCHAR(100) NOT NULL, number INT NOT NULL, employer VARCHAR(100) NOT NULL)';
+    const personTable = 'CREATE TABLE IF NOT EXISTS Person(name VARCHAR(50) NOT NULL, email VARCHAR(100) NOT NULL, number INT NOT NULL, employer VARCHAR(100) NOT NULL, PRIMARY KEY (name))';
     client
         .query(personTable)
         .then((res) => {

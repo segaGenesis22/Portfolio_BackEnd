@@ -17,7 +17,9 @@ const config = {
     idleTimeoutMillis: 30000,
 }; 
 
-const client = new Client.Pool(config);
+const client = new Client.Pool({
+    connectionString: isProduction ? process.env.HEROKU_POSTGRESQL_RED_URL : connectionString, ssl: isProduction,
+});
 
 client.on("connect", () => {
     console.log("Connected to Postgres database.")

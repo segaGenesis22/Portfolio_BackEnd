@@ -6,7 +6,7 @@ const db = require("../service/dbConnection.js");
 
 router.get("/", async (req, res) => {
     try {
-        response.json({message: "Server Response."})
+        res.json({message: "Server Response."})
     } catch (error) {
         res.status(500).json({message: err.message})
     }

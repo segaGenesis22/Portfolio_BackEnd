@@ -4,8 +4,12 @@ const router = express.Router();
 require("dotenv").config();
 const db = require("../service/dbConnection.js");
 
-router.get("/", (req, res) => {
-    response.json({message: "Server Response."})
+router.get("/", async (req, res) => {
+    try {
+        response.json({message: "Server Response."})
+    } catch (error) {
+        res.status(500).json({message: err.message})
+    }
 });
 
 module.exports = router;

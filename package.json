@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node server.js",
     "create": "node ./service/dbConnection.js createTables",
-    "devStart": "node index.js"
+    "devStart": "node ./index.js"
   },
   "author": "Genesis Guerra",
   "license": "ISC",

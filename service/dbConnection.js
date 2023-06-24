@@ -18,7 +18,8 @@ const config = {
 }; 
 
 const client = new Client.Pool({
-    connectionString: isProduction ? process.env.HEROKU_POSTGRESQL_RED_URL : connectionString, ssl: isProduction,
+    connectionString: isProduction ? process.env.HEROKU_POSTGRESQL_RED_URL : connectionString, 
+    ssl: isProduction,
 });
 
 client.on("connect", () => {

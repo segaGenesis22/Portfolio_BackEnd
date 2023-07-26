@@ -1,9 +1,10 @@
+require("make-runnable");
+
 const Client = require("pg");
-require('dotenv').config();
 
-const isProduction = process.env.NODE_ENV === 'production';
-
-const connectionString = `postgresql://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_DATABASE}`;
+// require('dotenv').config();
+// const isProduction = process.env.NODE_ENV === 'production';
+// const connectionString = `postgresql://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_DATABASE}`;
 
 const config = {
     adapter: "sails-postgresql",
@@ -23,6 +24,11 @@ client.on("connect", () => {
     console.log("Connected to Postgres database.")
 });
 
+client.on("remove", () => {
+    console.log("client removed");
+    process.exit(0);
+});
+
 const createTables = () => {
     const personTable = 'CREATE TABLE IF NOT EXISTS Person(name VARCHAR(50) NOT NULL, email VARCHAR(100) NOT NULL, number INT NOT NULL, employer VARCHAR(100) NOT NULL, PRIMARY KEY (name))';
     client
@@ -37,14 +43,7 @@ const createTables = () => {
         });
 };
 
-client.on("remove", () => {
-    console.log("client removed");
-    process.exit(0);
-});
-
 module.exports = {
     createTables,
     client,
 };
-
-require("make-runnable");

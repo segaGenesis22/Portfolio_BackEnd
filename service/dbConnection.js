@@ -1,5 +1,3 @@
-require("make-runnable");
-
 const Client = require("pg");
 
 // require('dotenv').config();
@@ -47,3 +45,5 @@ module.exports = {
     createTables,
     client,
 };
+
+require("make-runnable");

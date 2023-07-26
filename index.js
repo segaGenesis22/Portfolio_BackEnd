@@ -31,4 +31,4 @@ const app = require("./app");
 //     console.log('Listening on ' + bind);
 // });
 
-app.listen(3001, () => console.log('Server Started')) 
+app.listen(process.env.PORT || 5001, () => console.log('Server Started')) 

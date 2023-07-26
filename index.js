@@ -1,7 +1,7 @@
 require("dotenv").config();
-const http = require("http");
-
 const app = require("./app");
+
+// const http = require("http");
 
 // const errorHandler = error => {
 //     if (error.syscall !== 'listen') {
@@ -32,4 +32,4 @@ const app = require("./app");
 //     console.log('Listening on ' + bind);
 // });
 
-app.listen(process.env.PORT || 5432, () => console.log('Server Started')) 
+app.listen(process.env.PORT || 5000, () => console.log('Server Started')) 

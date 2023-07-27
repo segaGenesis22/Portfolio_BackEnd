@@ -11,7 +11,7 @@ router.post('/', async (req, res) => {
         employer: req.body.employer
     }
     db.client.connect((err, client) => {
-        const insertQuery = "INSERT INTO Person (name, email, number, employer) VALUES($1, $2, $3, $4)";
+        const insertQuery = "INSERT INTO Person(name, email, number, employer) VALUES($1, $2, $3, $4) RETURNING *";
         const values = [data.name, data.email, data.number, data.employer];
 
         client

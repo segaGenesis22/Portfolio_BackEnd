@@ -26,7 +26,7 @@ router.post('/', async (req, res) => {
                       email: result.email,
                       number: result.number,
                       employer: result.employer,
-                    },
+                    }
                 });
             })
             .catch((err) => {

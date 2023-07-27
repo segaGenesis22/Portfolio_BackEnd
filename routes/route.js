@@ -3,7 +3,7 @@ const router = express.Router();
 const db = require("../service/dbConnection");
 
 
-router.get('/', async (req, res) => {
+router.post('/', async (req, res) => {
     const data = {
         name: req.body.name,
         email: req.body.email,

@@ -1,3 +1,6 @@
+const pgDB = require("./service/dbConnection");
+const db = pgDB.client.connect();
+
 const app = require("./app");
 
 // const http = require("http");
